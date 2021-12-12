@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "gantik8s-2862"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "gantik8s-2862"
+  template:
+    metadata:
+      labels:
+        app: "gantik8s-2862"
+    spec:
+      containers:
+        - name: "gantik8s-2862"
+          image: "ws1212053crr5ugfbutecq4q.azurecr.io/gantik8s"
+          ports:
+          - containerPort: 80
